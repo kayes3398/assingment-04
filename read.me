@@ -1,0 +1,37 @@
+1. Difference between getElementById, getElementsByClassName, and querySelector
+Think of these as different ways to find someone in a building:
+
+getElementById: It’s like searching for someone by their unique National ID. It's the fastest way and gives you exactly one person (element).
+
+getElementsByClassName: It’s like calling out a group name (e.g., "All students"). It gives you a list of everyone with that class.
+
+querySelector: This is the "all-rounder." You can search by ID, class, or even tags (like #myId or .myClass). It’s very popular because it’s flexible, though a tiny bit slower than the first one.
+
+2. How to create and insert a new element?
+It’s basically a 3-step process, like making a sandwich:
+
+Make it: const newDiv = document.createElement('div'); (Creating the bread)
+
+Fill it: newDiv.innerText = "Hello!"; (Adding the meat/veggies)
+
+Place it: document.body.appendChild(newDiv); (Putting it on the plate/DOM)
+
+3. What is Event Bubbling?
+Imagine you have a button inside a div. When you click the button, the click doesn't just stay there. It "bubbles up" like air in water. First, the button knows it was clicked, then the div knows, then the whole page knows.
+
+It’s like if you poke a person, their shirt feels it, then their skin feels it, then their brain feels it.
+
+4. What is Event Delegation?
+This is a smart trick. Instead of putting a click-listener on every single button (which is tiring and slow), you put one listener on their parent (like a div or ul).
+
+Because of "Bubbling," any click on a child will reach the parent anyway. The parent then just checks, "Hey, which child was actually clicked?" and handles it. It’s great for performance and works even for buttons you add later!
+
+5. preventDefault() vs stopPropagation()
+These two are like "Stop!" signs but for different things:
+
+preventDefault(): This stops the action. For example, if you click a link, it stops it from opening the URL. Or if you click "Submit," it stops the form from refreshing the page.
+
+
+
+
+
